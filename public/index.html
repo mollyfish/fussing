@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knitting App</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/deps/pureforms.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <script src="js/deps/jquery.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Knitting App</h1>
+    </header>
+    <section>
+      <form id="initial" class="pure-form pure-form-aligned">
+        <fieldset id="user-info" class="pure-control-group"><legend>Get Started</legend>
+          <label for="proj-name" class="scoot-left">Name your design: 
+          <input type="text" class="pure-input-rounded" id="proj-name" name="proj-name" placeholder="My cozy sweater"></label>
+          <p>Choose your measurement system:</p>
+          <label for="imperial"><input type="radio" name="meas" id="imperial" value="imperial" checked>Imperial (in)</label>
+          <label for="metric"><input type="radio" name="meas" id="metric" value="metric">Metric (cm)</label>
+        </fieldset>
+        <fieldset id="gauge" class="pure-form-aligned pure-control-group"><legend>Gauge<sup>*</sup></legend>
+          <p>Take time to swatch to save time later!  No one likes to frog.</p>
+          <label for="st-gauge" class="scoot-left">Stitches per <span class="units">4 inches</span>: </label>
+          <input type="text" class="pure-input-rounded" id="st-gauge" name="st-gauge" placeholder="0.0" size="4">
+          <label for="row-gauge">Rows per <span class="units">4 inches</span>: </label>
+          <input type="text" class="pure-input-rounded" id="row-gauge" name="row-gauge" placeholder="0.0" size="4">
+        </fieldset>
+        <fieldset id="body-measurements" class="pure-control-group"><legend>Enter Your Measurements</legend>
+          <label for="bust" class="scoot-left">Chest: 
+          <input type="text" class="pure-input-rounded" id="bust" name="bust" placeholder="0.0" size="4"></label>
+          <label for="sleeve">Sleeve: 
+          <input type="text" class="pure-input-rounded" id="sleeve" name="sleeve" placeholder="0.0" size="4"></label>
+          <label for="bicep">Upper arm: 
+          <input type="text" class="pure-input-rounded" id="bicep" name="bicep" placeholder="0.0" size="4"></label>
+          <label for="armhole">Armhole: 
+          <input type="text" class="pure-input-rounded" id="armhole" name="armhole" placeholder="0.0" size="4"></label>
+          <label for="back">Back: 
+          <input type="text" class="pure-input-rounded" id="back" name="back" placeholder="0.0" size="4"></label>
+          <p>Or, </p>
+          <p>
+          <label for="standards" class="scoot-left"><input type="checkbox" name="standards" value="standards" id="standards" class="conditional-input">Check this box to use standard measurements from the <a href="http://www.craftyarncouncil.com/sizing.html" target="_blank">Craft Yarn Council</a> <img src="images/target-blank.png" width="10" height="10" alt="opens in new window icon">.</label></p><p>
+          <label for="female" class="scoot-left"><input type="radio" name="gender" value="female" id="female" class="conditional-input" checked>Women's sizes</label>
+          <label for="male" class="scoot-left"><input type="radio" name="gender" value="male" id="male" class="conditional-input">Men's sizes</label></p><p>
+          <label for="xsmall"  class="scoot-left"><input type="radio" name="size" value="xsmall" id="xsmall" class="conditional-input">X-Small</label>
+          <label for="small"><input type="radio" name="size" value="small" id="small" class="conditional-input">Small</label>
+          <label for="medium"><input type="radio" name="size" value="medium" id="medium" class="conditional-input" checked>Medium</label>
+          <label for="large"><input type="radio" name="size" value="large" id="large" class="conditional-input">Large</label>
+          <label for="xlarge"><input type="radio" name="size" value="xlarge" id="xlarge" class="conditional-input">1X</label>
+          <label for="xxlarge"><input type="radio" name="size" value="xxlarge" id="xxlarge" class="conditional-input">2X</label></p>
+
+          
+        </fieldset>
+        <fieldset id="add-ons" class="pure-control-group"><legend>Special Considerations</legend>
+          <p>Will your sweater be shaped in the torso?</p>
+          <label for="no-shape"><input type="radio" class="pure-input-rounded" name="shape" id="no-shape" value="no-shape" checked>No</label>
+          <label for="yes-shape"><input type="radio" name="shape" id="yes-shape" value="yes-shape">Yes</label>
+          <label for="waist" class="conditional-input">Waist: 
+          <input type="text" class="pure-input-rounded" id="waist" name="waist" placeholder="0.0" size="4"></label>
+          <p>Will your sweater be long enough to cover your hips?</p>
+          <label for="no-hips"><input type="radio" name="hips" id="no-hips" value="no-hips" checked>No</label>
+          <label for="yes-hips"><input type="radio" name="hips" id="yes-hips" value="yes-hips">Yes</label>
+          <label for="hips" class="conditional-input">Hips: 
+          <input type="text" class="pure-input-rounded" id="hips" name="hips" placeholder="0.0" size="4"></label>
+        </fieldset>
+        <button type="submit" id="new-store-button">Save My Info</button>
+        <p class="de-emphasis"><sup>*</sup>Make your swatch in the same stitch pattern you will use to make your sweater.</p>
+      </form> 
+    </section>
+  </main>
+</body>
+</html>
+
+
+
+  
